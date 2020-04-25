@@ -1,4 +1,4 @@
-import junit.framework.TestCase;
+import org.bitnick.duckduckgo.web.WebSearchV2;
 import org.junit.Test;
 
 import java.util.List;

@@ -1,9 +1,8 @@
 import static org.junit.Assert.*;
 
+import org.bitnick.duckduckgo.web.WebSearch;
 import org.junit.Ignore;
 import org.junit.Test;
-
-import junit.framework.TestCase;
 
 import java.util.List;
 

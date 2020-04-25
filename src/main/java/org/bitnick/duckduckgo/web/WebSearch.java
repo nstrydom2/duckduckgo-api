@@ -1,4 +1,4 @@
-/**
+package org.bitnick.duckduckgo.web; /**
  * Class for creating an object to make queries to
  * duckduckgo in a Java API
  *
@@ -14,7 +14,6 @@ public class WebSearch implements AutoCloseable {
 
 	/**
 	 * GET method to retrieve web page with results.
-	 *
 	 * @param query Search query for duckduckgo
 	 * @return
 	 * @throws Exception
@@ -28,7 +27,6 @@ public class WebSearch implements AutoCloseable {
 	/**
 	 * Runs the query through the html page using 'getPage()' method
 	 * above. Scrapes url results
-	 *
 	 * @param query Search query for duckduckgo
 	 * @return
 	 */
@@ -55,7 +53,6 @@ public class WebSearch implements AutoCloseable {
 	/**
 	 * Instant answer solution, completely inefficient but easy
 	 * and not redundant
-	 *
 	 * @param query Search query for duckduckgo
 	 * @return
 	 */
