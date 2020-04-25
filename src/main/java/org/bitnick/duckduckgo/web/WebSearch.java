@@ -7,8 +7,11 @@ package org.bitnick.duckduckgo.web; /**
  */
 
 import java.util.*;
+
+import org.bitnick.duckduckgo.web.search.Result;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
 
 public class WebSearch implements AutoCloseable {
 
@@ -28,21 +31,28 @@ public class WebSearch implements AutoCloseable {
 	 * Runs the query through the html page using 'getPage()' method
 	 * above. Scrapes url results
 	 * @param query Search query for duckduckgo
-	 * @return
+	 * @return List of Result objects
 	 */
-	public List<String> search(String query) {
-		final String CLASSNAME = "result__a";
+	public List<Result> search(String query) {
+		final String RESULT_CLASSNAME = "links_main links_deep result__body";
 
-		Set<String> tempSet = new TreeSet<String>();
+		List<Result> results = new ArrayList<>();
 
 		try {
 			Document doc = this.getPage(query);
 
-			doc.getElementsByClass(CLASSNAME).forEach(element -> {
-				tempSet.add(element.attr("href"));
+			doc.getElementsByClass(RESULT_CLASSNAME).forEach(element -> {
+				Elements aTags = element.getElementsByTag("a");
+
+				Result result = new Result();
+				result.setTitle(aTags.get(0).text());
+				result.setUrl(aTags.get(0).attr("href"));
+				result.setDescription(aTags.get(3).text());
+
+				results.add(result);
 			});
 
-			return new ArrayList(tempSet);
+			return results;
 		} catch (Exception ex) {
 			ex.printStackTrace();
 
@@ -56,7 +66,7 @@ public class WebSearch implements AutoCloseable {
 	 * @param query Search query for duckduckgo
 	 * @return
 	 */
-	public String instantAnswerSearch(String query) {
+	public Result instantAnswerSearch(String query) {
 		return this.search(query).get(0);
 	}
 

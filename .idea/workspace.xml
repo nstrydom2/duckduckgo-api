@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8979cedf-1997-4869-a07f-a859c14f2368" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/bitnick/duckduckgo/web/search/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bitnick/duckduckgo/web/WebSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bitnick/duckduckgo/web/WebSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/WebSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WebSearchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/WebSearchV2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WebSearchV2Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WebSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WebSearchV2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/WebSearchTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/WebSearchTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/WebSearchV2Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/WebSearchV2Test.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +40,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.WebSearchTest.printsElementsIAmLookingFor">
+    <configuration name="WebSearchTest.printsElementsIAmLookingFor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="duckduckgo" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="WebSearchTest" />
+      <option name="METHOD_NAME" value="printsElementsIAmLookingFor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebSearchV2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="duckduckgo" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="WebSearchV2Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WebSearchV2Test.inheritanceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="duckduckgo" />
       <option name="PACKAGE_NAME" value="" />
@@ -46,6 +72,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WebSearchTest.printsElementsIAmLookingFor" />
+        <item itemvalue="JUnit.WebSearchV2Test" />
         <item itemvalue="JUnit.WebSearchV2Test.inheritanceTest" />
       </list>
     </recent_temporary>
@@ -73,5 +101,31 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/WebSearchV2Test.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/bitnick/duckduckgo/web/WebSearch.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/bitnick/duckduckgo/web/WebSearch.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/bitnick/duckduckgo/web/WebSearch.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

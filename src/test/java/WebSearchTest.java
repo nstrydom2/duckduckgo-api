@@ -1,6 +1,7 @@
 import static org.junit.Assert.*;
 
 import org.bitnick.duckduckgo.web.WebSearch;
+import org.bitnick.duckduckgo.web.search.Result;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -20,9 +21,14 @@ public class WebSearchTest {
 	public void printsElementsIAmLookingFor() throws Exception {
 		final WebSearch webSearchTest = WebSearch.instanceOf();
 
-		List<String> testList = webSearchTest.search("Rebecca Frazer");
+		List<Result> testList = webSearchTest.search("Rebecca Frazer");
 
-		testList.forEach(System.out::println);
+		testList.forEach(result -> {
+			System.out.println(result.getTitle());
+			System.out.println(result.getUrl());
+			System.out.println(result.getDescription());
+			System.out.println();
+		});
 
 		assertNotNull(testList);
 	}
@@ -40,9 +46,12 @@ public class WebSearchTest {
 	public void testWebInstantAnswerSearchReturnIsNotNull() throws Exception {
 		final WebSearch webSearchTest = WebSearch.instanceOf();
 
-		String result = webSearchTest.instantAnswerSearch("paper");
-		
-		System.out.println(result);
+		Result result = webSearchTest.instantAnswerSearch("paper");
+
+		System.out.println(result.getTitle());
+		System.out.println(result.getUrl());
+		System.out.println(result.getDescription());
+		System.out.println();
 	}
 	
 	
